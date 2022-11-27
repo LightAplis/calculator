@@ -6,10 +6,9 @@ int main(){
 	int s;
 	double num1=0,num2=0;
 	char n;
-	char arr[1000] = {};  //³õÊ¼»¯×Ö·û´®
-	cin>>arr;//ÊäÈë×Ö·û´®
-	int len = strlen(arr);//µ÷ÓÃ×Ö·û´®³¤¶È¼ÆËãº¯Êı
-	//cout<<len<<endl<<arr[0];
+	char arr[1000] = {};  //åˆå§‹åŒ–å­—ç¬¦ä¸²
+	cin>>arr;//è¾“å…¥å­—ç¬¦ä¸²
+	int len = strlen(arr);//è°ƒç”¨å­—ç¬¦ä¸²é•¿åº¦è®¡ç®—å‡½æ•°
  	for(int i=0;i<len;i++){
  		if(arr[i]=='+'){
  			n='+';
@@ -32,15 +31,15 @@ int main(){
 			s=i;
 			break;
 		}
-	}//»ñÈ¡ÔËËã·ûºÅ 
+	}//è·å–è¿ç®—ç¬¦å· 
 	for(int i=0;i<s;i++){
 		num1=num1*10+(arr[i]-'0');
 	}
-	//µÚÒ»¸öÊı 
+	//ç¬¬ä¸€ä¸ªæ•° 
 	for(int i=s+1;i<len;i++){
 		num2=num2*10+(arr[i]-'0');
 	}
-	//µÚÒ»¸öÊı
+	//ç¬¬ä¸€ä¸ªæ•°
 	if(n=='+'){
 		cout<<num1+num2;
 	}else if(n=='-'){
@@ -59,7 +58,7 @@ int main(){
 		cout<<x;
 	}
 
-}
+}//ç®—å€¼
 
 
 
