@@ -57,7 +57,7 @@ int main(){
 	p=0;
 	for(int i=s+1;i<len;i++){
 		if(arr[i]=='.'){
-			p=len-(i+0);
+			p=len-(i+1);
 		}else{
 			num2=num2*10+(arr[i]-'0');
 		}
