@@ -1,14 +1,23 @@
 #include<bits/stdc++.h>
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std; 
-
 int main(){
+	cout<<"è¿™æ˜¯ä¸€ä¸ªè®¡ç®—å™¨ï¼Œç›®å‰åªæ”¯æŒä¸¤ä¸ªæ•°çš„è¿ç®—ã€‚"<<endl<<"æ”¯æŒåŠ ã€å‡ã€ä¹˜ã€é™¤ã€å¹‚ã€é˜¶ä¹˜"<<endl<<"TIPS:å¹‚çš„æ ¼å¼æ˜¯a^b"<<endl; 
 	int s;
 	double num1=0,num2=0;
 	char n;
-	char arr[1000] = {};  //³õÊ¼»¯×Ö·û´®
-	cin>>arr;//ÊäÈë×Ö·û´®
-	int len = strlen(arr);//µ÷ÓÃ×Ö·û´®³¤¶È¼ÆËãº¯Êý
+	char arr[1000];  
+	while(1){
+	for (int i=0;i<1001;i++){//åˆå§‹åŒ–
+		arr[i]=0;
+	}
+	num1=0;
+	num2=0;//åˆå§‹åŒ–
+	cin>>arr;//è¾“å…¥å­—ç¬¦ä¸²
+	if(arr[0]=='e'&&arr[1]=='x'&&arr[2]=='i'&&arr[3]=='t'){
+		exit(0);
+	}
+	int len = strlen(arr);//è°ƒç”¨å­—ç¬¦ä¸²é•¿åº¦è®¡ç®—å‡½æ•°
  	for(int i=0;i<len;i++){
  		if(arr[i]=='+'){
  			n='+';
@@ -31,15 +40,32 @@ int main(){
 			s=i;
 			break;
 		}
-	}//»ñÈ¡ÔËËã·ûºÅ 
+	}//èŽ·å–è¿ç®—ç¬¦å· 
+	int p=0;
 	for(int i=0;i<s;i++){
-		num1=num1*10+(arr[i]-'0');
+		if(arr[i]=='.'){
+			p=s-(i+1);
+		}else{
+			num1=num1*10+(arr[i]-'0');
+		}
+		
 	}
-	//µÚÒ»¸öÊý 
+	for(int i=0;i<p;i++){
+		num1=num1/10;
+	}
+	//ç¬¬ä¸€ä¸ªæ•° 
+	p=0;
 	for(int i=s+1;i<len;i++){
-		num2=num2*10+(arr[i]-'0');
+		if(arr[i]=='.'){
+			p=len-(i+0);
+		}else{
+			num2=num2*10+(arr[i]-'0');
+		}
 	}
-	//µÚÒ»¸öÊý
+	for(int i=0;i<p;i++){
+		num2=num2/10;
+	}
+	//ç¬¬2ä¸ªæ•°
 	if(n=='+'){
 		cout<<num1+num2;
 	}else if(n=='-'){
@@ -57,6 +83,8 @@ int main(){
 		}
 		cout<<x;
 	}
-
-}//ËãÖµ
-
+	cout<<endl<<"------------"<<endl;
+	
+	}//ç®—å€¼
+}
+	
