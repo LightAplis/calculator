@@ -2,7 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std; 
 int main(){
-	cout<<"è¿™æ˜¯ä¸€ä¸ªè®¡ç®—å™¨ï¼Œç›®å‰åªæ”¯æŒä¸¤ä¸ªæ•°çš„è¿ç®—ã€‚"<<endl<<"æ”¯æŒåŠ ã€å‡ã€ä¹˜ã€é™¤ã€å¹‚ã€é˜¶ä¹˜"<<endl<<"TIPS:å¹‚çš„æ ¼å¼æ˜¯a^b"<<endl; 
+	cout<<"ÕâÊÇÒ»¸ö¼ÆËãÆ÷£¬Ä¿Ç°Ö»Ö§³ÖÁ½¸öÊýµÄÔËËã¡£"<<endl<<"Ö§³Ö¼Ó¡¢¼õ¡¢³Ë¡¢³ý¡¢ÃÝ¡¢½×³Ë"<<endl<<"TIPS:ÃÝµÄ¸ñÊ½ÊÇa^b"<<endl; 
 	int s,p=0;
 	int x=1;
 	double num1=0,num2=0;
@@ -10,17 +10,17 @@ int main(){
 	char n;
 	char arr[1000];  
 	while(1){
-	for (int i=0;i<1001;i++){//åˆå§‹åŒ–
+	for (int i=0;i<1001;i++){//³õÊ¼»¯
 		arr[i]=0;
 	}
 	num1=0;
-	num2=0;//åˆå§‹åŒ–
+	num2=0;//³õÊ¼»¯
 	fac=0;
-	cin>>arr;//è¾“å…¥å­—ç¬¦ä¸²
+	cin>>arr;//ÊäÈë×Ö·û´®
 	if(arr[0]=='e'&&arr[1]=='x'&&arr[2]=='i'&&arr[3]=='t'){
 		exit(0);
 	}
-	int len = strlen(arr);//è°ƒç”¨å­—ç¬¦ä¸²é•¿åº¦è®¡ç®—å‡½æ•°
+	int len = strlen(arr);//µ÷ÓÃ×Ö·û´®³¤¶È¼ÆËãº¯Êý
  	for(int i=0;i<len;i++){
  		if(arr[i]=='+'){
  			n='+';
@@ -47,7 +47,7 @@ int main(){
 			s=i;
 			break;
 		}
-	}//èŽ·å–è¿ç®—ç¬¦å·
+	}//»ñÈ¡ÔËËã·ûºÅ
 	if(n=='!'){
 		p=0;
 		for(int i=0;i<s;i++){
@@ -57,7 +57,7 @@ int main(){
 				fac=fac*10+(arr[i]-'0');
 			}
 		
-		}//ç¬¬ä¸€ä¸ªæ•°
+		}//µÚÒ»¸öÊý
 		x=1;
 		for(int i=1;i<=fac;i++){
 				x=x*i;
@@ -76,7 +76,7 @@ int main(){
 		for(int i=0;i<p;i++){
 			num1=num1/10;
 		}
-		//ç¬¬ä¸€ä¸ªæ•° 
+		//µÚÒ»¸öÊý 
 		p=0;
 		for(int i=s+1;i<len;i++){
 			if(arr[i]=='.'){
@@ -88,7 +88,7 @@ int main(){
 		for(int i=0;i<p;i++){
 			num2=num2/10;
 		}
-		//ç¬¬2ä¸ªæ•°
+		//µÚ2¸öÊý
 		if(n=='+'){
 			cout<<num1+num2;
 		}else if(n=='-'){
@@ -107,9 +107,10 @@ int main(){
 			cout<<x;
 		}
 	}
-	//ç®—å€¼
+	//ËãÖµ
 	cout<<endl<<"------------"<<endl;
 	
 	}
 }
 	
+
